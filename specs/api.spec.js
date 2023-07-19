@@ -2,24 +2,24 @@ import { expect, it } from '@jest/globals'
 import fetch from 'node-fetch'
 
 // Не пригодилось, но сделал, чтобы попрактиковаться
-async function getToken () {
-  const res = await fetch(
-    'https://dummyjson.com/auth/login',
-    {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        username: 'kminchelle',
-        password: '0lelplR'
-      })
-    }
-  )
-  const data = await res.json()
-  const token = data.token
-  return token
-}
+// async function getToken () {
+//   const res = await fetch(
+//     'https://dummyjson.com/auth/login',
+//     {
+//       method: 'POST',
+//       headers: {
+//         'Content-Type': 'application/json'
+//       },
+//       body: JSON.stringify({
+//         username: 'kminchelle',
+//         password: '0lelplR'
+//       })
+//     }
+//   )
+//   const data = await res.json()
+//   const token = data.token
+//   return token
+// }
 
 describe('dummyjson API Testing', () => {
   it('GET /products is 200 OK', async () => {
