@@ -39,3 +39,43 @@ export const getTotal = (items = [], discount = 0) => {
   }, 0)
   return total - total * discount / 100
 }
+
+const randomObject = {
+  Anna: 10,
+  Petya: 15,
+  Vasya: 20,
+  Sergei: 50
+}
+
+const randomArrayOfObjects = [{
+  Anna: 10,
+  Petya: 15,
+  Vasya: 20,
+  Sergei: 50
+},
+{
+  Katya: 10,
+  Vova: 15,
+  Pasha: 20
+}]
+
+const getScore = (obj = { default: 0 }) => {
+  switch (typeof (obj)) {
+    case 'object': {
+      if (obj instanceof Array) {
+        return 'Неверный тип данных'
+      }
+
+      const userScores = Object.values(obj)
+      const initialValue = 0
+      const sumWithInitial = userScores.reduce((accumulator, currentValue) => accumulator + currentValue, initialValue)
+      return sumWithInitial
+    }
+    default:
+      return 'Неверный тип данных'
+  }
+}
+
+getScore(randomObject)
+getScore(randomArrayOfObjects)
+getScore()
