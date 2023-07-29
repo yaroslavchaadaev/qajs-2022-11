@@ -30,6 +30,13 @@ const user = {
       .get('/api/v1/user')
       .set('Accept', 'application/json')
       .set('Authorization', `Bearer ${token}`)
+  },
+
+  userAvatar: (token) => {
+    return supertest(baseURL)
+      .get(`/${config.credentials.username}/avatar`)
+      .set('Accept', 'application/json')
+      .set('Authorization', `Bearer ${token}`)
   }
 }
 
