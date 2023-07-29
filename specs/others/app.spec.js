@@ -1,6 +1,6 @@
 // import { expect, it } from '@jest/globals'
 // import fetch from 'node-fetch'
-import { nameIsValid, fullTrim, getTotal } from '../src/app.js'
+import { nameIsValid, fullTrim, getTotal } from '../../src/app.js'
 
 describe('Test Example', () => {
   it('adds 1 + 2 to equal 3', () => {
