@@ -1,8 +1,10 @@
-import { uniqueNamesGenerator, adjectives, colors, animals } from 'unique-names-generator'
+import { faker } from '@faker-js/faker'
+
+const randomString = faker
 
 const name = {
   newRandomName: () => {
-    return uniqueNamesGenerator({ dictionaries: [adjectives, colors, animals] })
+    return randomString.person.fullName()
   }
 }
 
