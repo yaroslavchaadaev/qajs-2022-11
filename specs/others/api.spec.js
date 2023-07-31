@@ -25,8 +25,6 @@ describe('dummyjson API Testing', () => {
   it('GET /products is 200 OK', async () => {
     const URI = 'https://dummyjson.com/products'
     const response = await fetch(URI)
-    const data = await response.json()
-    console.log(data)
     expect(response.status).toBe(200)
   })
   it('Invalid credentials', async () => {
@@ -99,7 +97,6 @@ describe('dummyjson API Testing', () => {
     const data = await res.json()
     expect(res.status).toBe(404)
     expect(data).toHaveProperty('message')
-    console.log(data.message)
     expect(data.message).toEqual('Product with id \'' + randomValue + '\' not found')
   })
 })
