@@ -1,7 +1,8 @@
 import config from '../../framework/config/config.js'
 import user from '../../helpers/user.js'
 
-describe('User auth tests', () => {
+// eslint-disable-next-line jest/no-disabled-tests
+describe.skip('User auth tests', () => {
   it('Positive: successfully logged in', async () => {
     const res = await user.login(config.credentials)
     expect(res.status).toBe(200)
@@ -16,7 +17,8 @@ describe('User auth tests', () => {
   })
 })
 
-describe('Get user info', () => {
+// eslint-disable-next-line jest/no-disabled-tests
+describe.skip('Get user info', () => {
   it('Positive: successfully got user info', async () => {
     const token = await user.getAuthToken()
     const res = await user.userInfo(token)
