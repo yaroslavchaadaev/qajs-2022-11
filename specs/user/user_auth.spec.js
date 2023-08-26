@@ -1,4 +1,3 @@
-import supertest from 'supertest'
 import config from '../../framework/config/config.js'
 import user from '../../helpers/user.js'
 

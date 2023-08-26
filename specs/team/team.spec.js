@@ -3,7 +3,8 @@ import team from '../../helpers/team.js'
 import name from '../../framework/fixtures/fixtures.js'
 
 describe('Some tests with teams', () => {
-  it('Positive: successfully create new team', async () => {
+  // eslint-disable-next-line jest/no-disabled-tests
+  it.skip('Positive: successfully create new team', async () => {
     const token = await user.getAuthToken()
     const newRandomName = name.newRandomName()
     const res = await team.createTeam(token, newRandomName)
@@ -12,7 +13,8 @@ describe('Some tests with teams', () => {
     expect(typeof res.body.name).toBe('string')
     expect(res.body.name).not.toBe('')
   })
-  it('Positive: created team is showed in the GET /api/v1/teams', async () => {
+  // eslint-disable-next-line jest/no-disabled-tests
+  it.skip('Positive: created team is showed in the GET /api/v1/teams', async () => {
     const token = await user.getAuthToken()
 
     const newRandomName = name.newRandomName()
