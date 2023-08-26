@@ -2,6 +2,9 @@ export default {
   collectCoverage: false,
   coverageProvider: 'v8',
   testMatch: ['**/specs/**/*.spec.*'],
+  transform: {
+    '^.+\\.[t|j]sx?$': 'babel-jest'
+  },
   reporters: [
     'default',
     [
