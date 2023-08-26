@@ -28,6 +28,7 @@ jobs:
       with:
         to: -924902275
         token: ${{ secrets.TELEGRAM_TOKEN }}
+        message_file: ./jest-html-report/report.html
         message: |
           ${{ github.actor }} created commit:
           Commit message: ${{ github.event.commits[0].message }}
