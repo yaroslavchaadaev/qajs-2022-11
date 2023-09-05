@@ -31,7 +31,7 @@ jobs:
         echo 'В .env'
         cat .env
       env:
-        TEST_BASE_URL: ${{ vars.VIKUNJA_TEST_PASS }}
+        TEST_BASE_URL: ${{ vars.VIKUNJA_TEST_URL }}
         VIKUNJA_TEST_LOGIN: ${{ vars.VIKUNJA_TEST_LOGIN }}
         VIKUNJA_TEST_PASS: ${{ vars.VIKUNJA_TEST_PASS }}
         ENV_FILE: ${{ vars.ENV_FILE }}
