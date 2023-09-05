@@ -2,8 +2,7 @@ import user from '../../helpers/user.js'
 import team from '../../helpers/team.js'
 import name from '../../framework/fixtures/fixtures.js'
 
-// eslint-disable-next-line jest/no-disabled-tests
-describe.skip('Some tests with teams', () => {
+describe('Some tests with teams', () => {
   it('Positive: successfully create new team', async () => {
     const token = await user.getAuthToken()
     const newRandomName = name.newRandomName()

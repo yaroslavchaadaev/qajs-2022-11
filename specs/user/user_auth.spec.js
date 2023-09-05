@@ -2,7 +2,7 @@ import config from '../../framework/config/config.js'
 import user from '../../helpers/user.js'
 
 // eslint-disable-next-line jest/no-disabled-tests
-describe.skip('User auth tests', () => {
+describe('User auth tests', () => {
   it('Positive: successfully logged in', async () => {
     const res = await user.login(config.credentials)
     expect(res.status).toBe(200)
@@ -18,7 +18,7 @@ describe.skip('User auth tests', () => {
 })
 
 // eslint-disable-next-line jest/no-disabled-tests
-describe.skip('Get user info', () => {
+describe('Get user info', () => {
   it('Positive: successfully got user info', async () => {
     const token = await user.getAuthToken()
     const res = await user.userInfo(token)
@@ -30,6 +30,6 @@ describe.skip('Get user info', () => {
     const res = await user.userInfo()
     expect(res.status).toBe(401)
     expect(res.body).toHaveProperty('message')
-    expect(res.body.message).toBe('invalid or expired jwt')
+    expect(res.body.message).toBe('missing, malformed, expired or otherwise invalid token provided')
   })
 })
