@@ -4,7 +4,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "set \"NODE_OPTIONS=--experimental-vm-modules\" && jest --setupFiles dotenv/config",
+    "test": "set \"NODE_OPTIONS=--experimental-vm-modules\" && jest --setupFiles dotenv/config --verbose",
     "lint": "eslint . --ignore-path .gitignore --cache",
     "lint:fix": "npm run lint -- --fix"
   },
